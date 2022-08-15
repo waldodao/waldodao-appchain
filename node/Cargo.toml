@@ -1,0 +1,121 @@
+[package]
+authors = ['Waldo Dao <hello@waldodao.com>']
+description = 'Waldo Dao Appchain Node.'
+edition = '2018'
+homepage = 'https://waldodao.com/'
+license = 'Apache-2.0'
+name = 'waldodao-appchain'
+publish = false
+repository = 'https://github.com/waldodao/waldodao-appchain'
+version = '1.0.0'
+
+[package.metadata.docs.rs]
+targets = ['x86_64-unknown-linux-gnu']
+
+[build-dependencies]
+substrate-build-script-utils = { git = 'https://github.com/paritytech/substrate', branch = 'polkadot-v0.9.18' }
+
+[dependencies]
+# External Dependencies
+codec = { package = 'parity-scale-codec', version = '3.0.0' }
+serde = { version = "1.0.136", features = ["derive"] }
+futures = "0.3"
+hex-literal = { version = '0.3.4' }
+jsonrpc-core = { version = '18.0.0' }
+jsonrpc-pubsub = { version = '18.0.0' }
+log = { version = '0.4' }
+clap = { version = "3.0", features = ["derive"] }
+
+# Substrate Dependencies
+## Substrate Primitive Dependencies
+beefy-primitives = { version = "4.0.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.18" }
+sp-api = { version = "4.0.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.18" }
+sp-authorship = { version = "4.0.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.18" }
+sp-block-builder = { version = "4.0.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.18" }
+sp-blockchain = { version = "4.0.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.18" }
+sp-consensus = { version = "0.10.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.18" }
+sp-consensus-babe = { version = "0.10.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.18" }
+sp-core = { version = "6.0.0", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.18" }
+sp-finality-grandpa = { git = 'https://github.com/paritytech/substrate.git', branch = 'polkadot-v0.9.18' }
+sp-keystore = { version = "0.12.0", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.18" }
+sp-runtime = { version = "6.0.0", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.18" }
+sp-timestamp = { version = "4.0.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.18" }
+sp-transaction-storage-proof = { version = "4.0.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.18" }
+sp-storage = { git = 'https://github.com/paritytech/substrate.git', branch = 'polkadot-v0.9.18' }
+sp-inherents = { git = 'https://github.com/paritytech/substrate.git', branch = 'polkadot-v0.9.18' }
+
+## Substrate Client Dependencies
+sc-basic-authorship = { version = "0.10.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.18" }
+sc-chain-spec = { version = "4.0.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.18" }
+sc-cli = { version = "0.10.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.18", features = ["wasmtime"] }
+sc-client-api = { version = "4.0.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.18" }
+sc-consensus = { git = 'https://github.com/paritytech/substrate.git', branch = 'polkadot-v0.9.18' }
+sc-consensus-babe = { version = "0.10.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.18" }
+sc-consensus-babe-rpc = { version = "0.10.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.18" }
+sc-consensus-epochs = { version = "0.10.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.18" }
+sc-consensus-slots = { version = "0.10.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.18" }
+sc-consensus-uncles = { version = "0.10.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.18" }
+sc-executor = { version = "0.10.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.18", features = ["wasmtime"]  }
+sc-finality-grandpa = { version = "0.10.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.18" }
+sc-finality-grandpa-rpc = { version = "0.10.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.18" }
+sc-keystore = { version = "4.0.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.18" }
+sc-network = { version = "0.10.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.18" }
+sc-rpc = { version = "4.0.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.18" }
+sc-rpc-api = { version = "0.10.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.18" }
+sc-service = { version = "0.10.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.18", features = ["wasmtime"]  }
+sc-sync-state-rpc = { version = "0.10.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.18" }
+sc-telemetry = { version = "4.0.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.18" }
+sc-transaction-pool = { version = "4.0.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.18" }
+sc-transaction-pool-api = { version = "4.0.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.18" }
+
+## Substrate Frame Dependencies
+frame-benchmarking = { version = "4.0.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.18" }
+frame-benchmarking-cli = { version = "4.0.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.18" }
+frame-system = { git = 'https://github.com/paritytech/substrate.git', branch = 'polkadot-v0.9.18' }
+frame-system-rpc-runtime-api = { git = 'https://github.com/paritytech/substrate.git', branch = 'polkadot-v0.9.18' }
+substrate-frame-rpc-system = { version = "4.0.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.18" }
+
+## Substrate Pallet Dependencies
+pallet-im-online = { version = "4.0.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.18" }
+pallet-mmr-rpc = { version = "3.0.0", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.18" }
+pallet-transaction-payment = { git = 'https://github.com/paritytech/substrate.git', branch = 'polkadot-v0.9.18' }
+pallet-transaction-payment-rpc = { version = "4.0.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.18" }
+beefy-gadget = { version = "4.0.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.18" }
+beefy-gadget-rpc = { version = "4.0.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.18" }
+pallet-contracts-rpc = { git = 'https://github.com/paritytech/substrate.git', branch = 'polkadot-v0.9.18' }
+
+# Octopus Dependencies
+## Octopus Pallet Dependencies
+pallet-octopus-appchain = { git = 'https://github.com/octopus-network/octopus-pallets.git', branch = 'release-v0.9.18' }
+pallet-octopus-lpos = { git = 'https://github.com/octopus-network/octopus-pallets.git', branch = 'release-v0.9.18' }
+
+# Frontier Dependencies
+## Frontier Primitive Dependencies
+fp-consensus = { git = "https://github.com/PureStake/frontier.git", branch = "moonbeam-polkadot-v0.9.18" }
+fp-rpc = { git = "https://github.com/PureStake/frontier.git", branch = "moonbeam-polkadot-v0.9.18" }
+fp-storage = { git = "https://github.com/PureStake/frontier.git", branch = "moonbeam-polkadot-v0.9.18" }
+
+## Frontier Client Dependencies
+fc-db = { git = "https://github.com/PureStake/frontier.git", branch = "moonbeam-polkadot-v0.9.18" }
+fc-mapping-sync = { git = "https://github.com/PureStake/frontier.git", branch = "moonbeam-polkadot-v0.9.18" }
+fc-consensus = { git = "https://github.com/PureStake/frontier.git", branch = "moonbeam-polkadot-v0.9.18" }
+fc-rpc = { git = "https://github.com/PureStake/frontier.git", branch = "moonbeam-polkadot-v0.9.18" }
+fc-rpc-core = { git = "https://github.com/PureStake/frontier.git", branch = "moonbeam-polkadot-v0.9.18" }
+
+## Frontier Pallet Dependencies
+pallet-dynamic-fee = { git = "https://github.com/PureStake/frontier.git", branch = "moonbeam-polkadot-v0.9.18" }
+pallet-base-fee = { git = "https://github.com/PureStake/frontier.git", branch = "moonbeam-polkadot-v0.9.18" }
+pallet-ethereum = { git = "https://github.com/PureStake/frontier.git", branch = "moonbeam-polkadot-v0.9.18" }
+pallet-evm = { git = "https://github.com/PureStake/frontier.git", branch = "moonbeam-polkadot-v0.9.18" }
+
+# Local Dependencies
+## Wdao Pallet Dependencies
+wdao-traits = {  path = '../pallets/wdao-traits' }
+wdao-rpc = { path = "../pallets/wdao-rpc" }
+
+## Wdao Runtime Dependencies
+waldodao-appchain-runtime = { path = '../runtime' }
+
+[features]
+default = []
+runtime-benchmarks = ['waldodao-appchain-runtime/runtime-benchmarks']

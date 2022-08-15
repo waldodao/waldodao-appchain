@@ -1,0 +1,163 @@
+{
+  "name": "WaldoDao Testnet",
+  "id": "waldodao_testnet",
+  "chainType": "Live",
+  "bootNodes": [
+    "/dns/bootnode-v1-0.waldodao.testnet.octopus.network/tcp/",
+    "/dns/bootnode-v1-1.waldodao.testnet.octopus.network/tcp/",
+    "/dns/bootnode-v1-2.waldodao.testnet.octopus.network/tcp/",
+    "/dns/bootnode-v1-3.waldodao.testnet.octopus.network/tcp/"
+  ],
+  "telemetryEndpoints": null,
+  "protocolId": "waldodao-testnet",
+  "properties": {
+    "ss58Format": 42,
+    "tokenDecimals": 18,
+    "tokenSymbol": "WALDO"
+  },
+  "forkBlocks": null,
+  "badBlocks": null,
+  "lightSyncState": null,
+  "consensusEngine": null,
+  "codeSubstitutes": {},
+  "genesis": {
+    "runtime": {
+      "system": {
+        "code": ""
+      },
+      "balances": {
+        "balances": []
+      },
+      "babe": {
+        "authorities": [],
+        "epochConfig": {
+          "c": [
+            1,
+            4
+          ],
+          "allowed_slots": "PrimaryAndSecondaryVRFSlots"
+        }
+      },
+      "octopusAssets": {
+        "assets": [],
+        "metadata": [],
+        "accounts": []
+      },
+      "grandpa": {
+        "authorities": []
+      },
+      "imOnline": {
+        "keys": []
+      },
+      "beefy": {
+        "authorities": []
+      },
+      "octopusAppchain": {
+        "anchorContract": "waldodao-appchain.registry.test_oct.testnet",
+        "validators": [],
+        "preminedAmount": 88000000000000000000000000,
+        "assetIdByName": [
+          [
+            "usdc.testnet",
+            0
+          ]
+        ]
+      },
+      "octopusLpos": {
+        "historyDepth": 84,
+        "eraPayout": 9132000000000000000000
+      },
+      "session": {
+        "keys": []
+      },
+      "treasury": null,
+      "councilCollective": {
+        "phantom": null,
+        "members": []
+      },
+      "techComitteeCollective": {
+        "phantom": null,
+        "members": []
+      },
+      "democracy": {
+        "phantom": null
+      },
+      "ethereumChainId": {
+        "chainId": 389
+      },
+      "baseFee": {
+        "baseFeePerGas": "0x3b9aca00",
+        "isActive": true,
+        "elasticity": 125000,
+        "marker": null
+      },
+      "dynamicFee": {
+        "minGasPrice": "0x0"
+      },
+      "evm": {
+        "accounts": {
+          "0x6be02d1d3665660d22ff9624b7be0551ee1ac91b": {
+            "nonce": "0x0",
+            "balance": "0x10f0cf064dd59200000",
+            "storage": {},
+            "code": []
+          }
+        }
+      },
+      "ethereum": {},
+      "scheduler": null,
+      "sudo": {
+        "key": ""
+      },
+      "tokens": {
+        "endowedAccounts": []
+      },
+      "ormlNft": {
+        "tokens": []
+      },
+      "wdaoConf": {
+        "royaltiesRate": 13107,
+        "platformFeeRate": 6,
+        "maxCommissionRewardRate": 65535,
+        "minCommissionAgentDeposit": 1000000000000000000,
+        "minOrderDeposit": 1000000000000000000,
+        "whiteList": [],
+        "categoryList": [],
+        "phantom": null
+      },
+      "wdaoNft": {
+        "classes": [
+          {
+            "class_id": 0,
+            "class_metadata": "{\\\"image\\\":\\\"\\\"}",
+            "category_ids": [
+              0
+            ],
+            "name": "Waldo Dao",
+            "description": "Waldo Dao",
+            "royalty_rate": 0,
+            "properties": 3,
+            "admins": [
+              "5F1m9ZZ6a4Jitet2AriPE6P3SchwZZwXKkQuGh8RrBxwzgPs"
+            ],
+            "tokens": [
+              {
+                "token_id": 0,
+                "token_metadata": "{\\\"name\\\":\\\"Waldo Dao\\\",\\\"description\\\":\\\"Waldo Dao bridge talent and hirer.\\\",\\\"image\\\":\\\"\\\"}",
+                "royalty_rate": 6553,
+                "token_owner": "5F1m9ZZ6a4Jitet2AriPE6P3SchwZZwXKkQuGh8RrBxwzgPs",
+                "token_creator": "5F1m9ZZ6a4Jitet2AriPE6P3SchwZZwXKkQuGh8RrBxwzgPs",
+                "royalty_beneficiary": "5F1m9ZZ6a4Jitet2AriPE6P3SchwZZwXKkQuGh8RrBxwzgPs",
+                "quantity": 1000
+              }
+            ]
+          }
+        ],
+        "phantom": null
+      },
+      "wdaoOrder": {
+        "phantom": null
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+[package]
+name = "evm-tracing-events"
+authors = ['Waldo Dao <hello@waldodao.com>']
+edition = "2018"
+homepage = "https://waldodao.com"
+license = "GPL-3.0-only"
+repository = 'https://github.com/waldodao/waldodao-appchain'
+version = "0.1.0"
+
+[dependencies]
+environmental = { version = "1.1.2", default-features = false }
+
+# Substrate
+codec = { package = "parity-scale-codec", version = "3.0.0", default-features = false }
+sp-runtime-interface = { git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.18", default-features = false }
+
+# Ethereum
+ethereum = { version = "0.9.0", default-features = false, features = [ "with-codec" ] }
+ethereum-types = { version = "0.12.0", default-features = false }
+evm = { version = "0.30.1", default-features = false, features = [ "with-codec" ] }
+evm-gasometer = { version = "0.30.0", default-features = false }
+evm-runtime = { version = "0.30.0", default-features = false }
+
+[features]
+default = [ "std" ]
+std = [
+	"codec/std",
+	"environmental/std",
+	"ethereum-types/std",
+	"ethereum/std",
+	"evm-gasometer/std",
+	"evm-runtime/std",
+	"evm/std",
+]
+evm-tracing = [ "evm-gasometer/tracing", "evm-runtime/tracing", "evm/tracing" ]

@@ -1,0 +1,29 @@
+{
+  "name": "WaldoDao Testnet",
+  "id": "waldodao_testnet",
+  "chainType": "Live",
+  "bootNodes": [
+    "/dns/bootnode-v1-0.waldodao.testnet.octopus.network/tcp/",
+    "/dns/bootnode-v1-1.waldodao.testnet.octopus.network/tcp/",
+    "/dns/bootnode-v1-2.waldodao.testnet.octopus.network/tcp/",
+    "/dns/bootnode-v1-3.waldodao.testnet.octopus.network/tcp/"
+  ],
+  "telemetryEndpoints": null,
+  "protocolId": "waldodao-testnet",
+  "properties": {
+    "ss58Format": 42,
+    "tokenDecimals": 18,
+    "tokenSymbol": "WALDO"
+  },
+  "forkBlocks": null,
+  "badBlocks": null,
+  "lightSyncState": null,
+  "consensusEngine": null,
+  "codeSubstitutes": {},
+  "genesis": {
+    "raw": {
+      "top": {},
+      "childrenDefault": {}
+    }
+  }
+}

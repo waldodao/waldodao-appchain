@@ -1,0 +1,24 @@
+[package]
+authors = ['Waldo Dao <hello@waldodao.com>']
+edition = '2018'
+homepage = 'https://waldodao.com'
+license = 'Apache-2.0'
+name = 'contract-types'
+readme = 'README.md'
+repository = 'https://github.com/waldodao/waldodao-appchain'
+version = '0.1.0'
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
+
+[dependencies]
+codec = { package = 'parity-scale-codec', version = '3.0.0', default-features = false, features = ['derive', 'max-encoded-len'] }
+serde = { version = '1.0.130', default-features = false, features = ['derive'], optional = true }
+scale-info = { version = '2.0.1', default-features = false, features = ['derive'] }
+
+[features]
+default = ['std']
+std = [
+	"serde/std",
+	"codec/std",
+]

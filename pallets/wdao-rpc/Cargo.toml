@@ -1,0 +1,21 @@
+[package]
+authors = ['Waldo Dao <hello@waldodao.com>']
+edition = '2018'
+homepage = 'https://waldodao.com'
+license = 'Apache-2.0'
+name = 'wdao-rpc'
+readme = 'README.md'
+repository = 'https://github.com/waldodao/waldodao-appchain'
+version = '1.0.0'
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
+
+[dependencies]
+jsonrpc-core = "18.0.0"
+jsonrpc-core-client = "18.0.0"
+jsonrpc-derive = "18.0.0"
+sp-runtime = { git = 'https://github.com/paritytech/substrate', branch = 'polkadot-v0.9.18' }
+sp-api = { git = 'https://github.com/paritytech/substrate', branch = 'polkadot-v0.9.18' }
+sp-blockchain = { git = 'https://github.com/paritytech/substrate', branch = 'polkadot-v0.9.18' }
+wdao-rpc-runtime-api = { path = "runtime-api" }

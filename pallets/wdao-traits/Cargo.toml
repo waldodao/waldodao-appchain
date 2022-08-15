@@ -1,0 +1,43 @@
+[package]
+authors = ['Waldo Dao <hello@waldodao.com>']
+edition = '2018'
+homepage = 'https://waldodao.com'
+license = 'Apache-2.0'
+name = 'wdao-traits'
+readme = 'README.md'
+repository = 'https://github.com/waldodao/waldodao-appchain'
+version = '1.0.0'
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
+
+[dependencies]
+codec = { package = 'parity-scale-codec', version = '3.0.0', default-features = false, features = ['derive', 'max-encoded-len'] }
+serde = { version = '1.0.130', default-features = false, features = ['derive'], optional = true }
+scale-info = { version = '2.0.1', default-features = false, features = ['derive'] }
+enumflags2 = { version = "0.6.3" }
+
+sp-std = { default-features = false, git = 'https://github.com/paritytech/substrate', branch = 'polkadot-v0.9.18' }
+sp-core = { default-features = false, git = 'https://github.com/paritytech/substrate', branch = 'polkadot-v0.9.18' }
+frame-support = { default-features = false, git = 'https://github.com/paritytech/substrate', branch = 'polkadot-v0.9.18' }
+sp-runtime = { default-features = false, git = 'https://github.com/paritytech/substrate', branch = 'polkadot-v0.9.18' }
+wdao-orml-traits = { default-features = false, path = "../wdao-orml-traits" }
+contract-types = { path = "contract-types", default-features = false }
+log = { version = "0.4.14", default-features = false }
+smallvec = "1.6.1"
+
+[features]
+default = ['std']
+std = [
+	"serde",
+	"log/std",
+	"codec/std",
+	"sp-core/std",
+	"sp-std/std",
+    "frame-support/std",
+	"enumflags2/serde",
+	"sp-runtime/std",
+	"contract-types/std",
+	"wdao-orml-traits/std",
+
+]
