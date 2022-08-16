@@ -1,8 +1,8 @@
 [package]
 name = "evm-tracing-events"
-authors = ['Waldo Dao <hello@waldodao.com>']
+authors = ['Waldo Dao <hello@waldo-dao.com>']
 edition = "2018"
-homepage = "https://waldodao.com"
+homepage = "https://waldo-dao.com"
 license = "GPL-3.0-only"
 repository = 'https://github.com/waldodao/waldodao-appchain'
 version = "0.1.0"

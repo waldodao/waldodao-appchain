@@ -1,8 +1,8 @@
 [package]
-authors = ['Waldo Dao <hello@waldodao.com>']
+authors = ['Waldo Dao <hello@waldo-dao.com>']
 description = "Various utilities including `FixedU128` and `LinkedList`."
 edition = '2018'
-homepage = 'https://waldodao.com'
+homepage = 'https://waldo-dao.com'
 license = 'Apache-2.0'
 name = 'wdao-orml-traits'
 repository = 'https://github.com/waldodao/waldodao-appchain'

@@ -1,8 +1,8 @@
 [package]
-authors = ['Waldo Dao <hello@waldodao.com>']
+authors = ['Waldo Dao <hello@waldo-dao.com>']
 description = "Provide `MultiCurrency` implementation using `pallet-balances` and `orml-tokens` module."
 edition = '2018'
-homepage = 'https://waldodao.com'
+homepage = 'https://waldo-dao.com'
 license = 'Apache-2.0'
 name = 'wdao-orml-currencies'
 readme = 'README.md'
