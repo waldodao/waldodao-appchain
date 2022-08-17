@@ -27,7 +27,8 @@ Follow these steps to get started with the Node
 ### Build
 
 ```bash
-cargo build
+cargo build --release
+
 ```
 
 ### Run
