@@ -685,9 +685,9 @@ impl<T: Config> Pallet<T> {
 		charge_royalty: Option<PerU16>,
 	) -> ResultPost<(T::AccountId, T::AccountId, ClassIdOf<T>, TokenIdOf<T>, TokenIdOf<T>)> {
 		// Check if Whitelist is Enable
-		if T::ExtraConfig::is_enable_whitelist() {
-			ensure!(T::ExtraConfig::is_in_whitelist(to), Error::<T>::AccountNotInWhitelist);
-		}
+		// if T::ExtraConfig::is_enable_whitelist() {
+		// 	ensure!(T::ExtraConfig::is_in_whitelist(to), Error::<T>::AccountNotInWhitelist);
+		// }
 
 		ensure!(quantity >= One::one(), Error::<T>::InvalidQuantity);
 		ensure!(who == &class_info.owner, Error::<T>::NoPermission);
@@ -731,9 +731,9 @@ impl<T: Config> Pallet<T> {
 		category_ids: Vec<GlobalId>,
 	) -> ResultPost<(T::AccountId, ClassIdOf<T>)> {
 		// Check if Whitelist is Enable
-		if T::ExtraConfig::is_enable_whitelist() {
-			ensure!(T::ExtraConfig::is_in_whitelist(who), Error::<T>::AccountNotInWhitelist);
-		}
+		// if T::ExtraConfig::is_enable_whitelist() {
+		// 	ensure!(T::ExtraConfig::is_in_whitelist(who), Error::<T>::AccountNotInWhitelist);
+		// }
 
 		ensure!(category_ids.len() <= MAX_CATEGORY_PER_CLASS, Error::<T>::CategoryOutOfBound);
 		ensure!(category_ids.len() >= 1, Error::<T>::CategoryOutOfBound);
